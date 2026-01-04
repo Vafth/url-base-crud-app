@@ -1,0 +1,41 @@
+name: Python application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up uv
+      uses: astral-sh/setup-uv@v5
+      with:
+        # Enable caching to speed up consecutive runs
+        enable-cache: true
+        cache-dependency-glob: "uv.lock"
+
+    - name: Set up Python
+      run: uv python install 3.12
+
+    - name: Install dependencies
+      # This installs both project and dev dependencies from pyproject.toml
+      run: uv sync --frozen
+
+    - name: Lint with flake8
+      # We use 'uv run' to execute flake8 within the project environment
+      run: |
+        uv pip install flake8
+        uv run flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+    - name: Test with pytest
+      # This will run pytest using the virtual environment managed by uv
+      run: uv run pytest

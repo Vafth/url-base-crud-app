@@ -1,0 +1,27 @@
+[project]
+name = "url-base-crud-app"
+version = "0.1.0"
+description = "Simple FastAPI web CRUD project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.115.12",
+    "uvicorn[standard]==0.24.0",
+    "sqlmodel==0.0.20",
+    "pydantic-settings==2.4.0",
+    "pydantic==2.8.2",
+    "passlib[bcrypt]==1.7.4",
+    "bcrypt==4.0.1",
+    "python-jose[cryptography]==3.3.0",
+    "pyjwt==2.10.1",
+    "python-dotenv==1.0.1",
+    "python-multipart==0.0.9",
+    "httpx==0.24.1",
+    "psycopg2-binary==2.9.9",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "anyio>=4.0.0",
+]
