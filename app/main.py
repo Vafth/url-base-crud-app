@@ -82,7 +82,7 @@ async def return_help_info():
                 },
             },  
             {
-                "/put/{task_id}/": {
+                "/change/{task_id}/": {
                     "task_id": "int",
                     "task_content": "str",
                 },

@@ -41,7 +41,7 @@ cp .env.example .env
 Edit `.env` and configure based on your setup:
 ```env
 # Security
-SECRET_KEY="your_super_secret_key_here"  # Generate with: openssl rand -hex 32
+SECRET_KEY="your_super_secret_key_here"  # Generate with: openssl rand -hex 32 or python -c "import secrets; print(secrets.token_hex(32))"
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 
@@ -58,7 +58,7 @@ DATABASE_URL=sqlite:///./app/database.db
 ### 3. Installation
 
 <details>
-<summary><b>Using Docker (Recommended for Production)</b></summary>
+<summary><b>Using Docker</b></summary>
 
 Docker Compose sets up both the FastAPI application and PostgreSQL database.
 
@@ -183,7 +183,7 @@ http://localhost:8000/complete/1/?complete_val=true
 http://localhost:8000/complete/1/?complete_val=false
 
 # Update task content
-http://localhost:8000/put/1/?task_content=Updated task content
+http://localhost:8000/change/1/?task_content=Updated task content
 ```
 
 #### Delete Tasks
