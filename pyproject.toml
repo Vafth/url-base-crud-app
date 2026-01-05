@@ -1,7 +1,7 @@
 [project]
 name = "url-base-crud-app"
 version = "0.1.0"
-description = "Simple FastAPI web CRUD project"
+description = "A minimalist task management system that operates primarily through URL query parameters. Built with FastAPI and SQLModel, following architectural patterns and security best practices from the Official FastAPI Guides"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [

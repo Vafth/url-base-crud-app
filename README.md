@@ -41,7 +41,7 @@ cp .env.example .env
 Edit `.env` and configure based on your setup:
 ```env
 # Security
-SECRET_KEY="your_super_secret_key_here"  # Generate with: openssl rand -hex 32 or python -c "import secrets; print(secrets.token_hex(32))"
+SECRET_KEY="your_super_secret_key_here"  # Generate with: 'openssl rand -hex 32' or 'python -c "import secrets; print(secrets.token_hex(32))"'
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 
@@ -51,6 +51,9 @@ DATABASE_URL=sqlite:///./app/database.db
 
 # For Docker/Production (PostgreSQL):
 # DATABASE_URL=postgresql://user:password@db:5432/dbname
+# POSTGRES_USER=user
+# POSTGRES_PASSWORD=password
+# POSTGRES_DB=dbname
 ```
 
 > **Note:** Comment/uncomment the appropriate `DATABASE_URL` based on whether you're running locally (SQLite) or via Docker (PostgreSQL).
