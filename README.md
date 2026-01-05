@@ -92,6 +92,7 @@ docker-compose down -v
 
 <details>
 <summary><b>Using pip</b></summary>
+
 ```bash
 # Create virtual environment
 python -m venv venv
@@ -113,6 +114,7 @@ Access the app at **http://localhost:8000**
 
 <details>
 <summary><b>Using uv</b></summary>
+
 ```bash
 # Sync dependencies
 uv sync
