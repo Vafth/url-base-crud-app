@@ -1,6 +1,7 @@
 # URL-Based CRUD App
 
-A minimalist task management system that operates primarily through URL query parameters. Built with **FastAPI** and **SQLModel**, following architectural patterns and security best practices from the [Official FastAPI Guides](https://fastapi.tiangolo.com/).
+A minimalist task management system that operates primarily through URL query parameters. 
+Built with **FastAPI** and **SQLModel**, following architectural patterns and security practices from the [Official FastAPI Guides](https://fastapi.tiangolo.com/).
 
 ## Key Features
 
